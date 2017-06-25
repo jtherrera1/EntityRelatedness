@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export LUA_PATH="$LUA_PATH;?.lua;/project/module/?.lua;/usr/local/share/lua/5.2/?.lua"
+export LUA_PATH="$LUA_PATH;?.lua;/EntityRelatedness/module/?.lua;/usr/local/share/lua/5.2/?.lua"
 
 SEQ=$1
 DATABASE=$2
