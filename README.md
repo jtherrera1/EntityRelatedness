@@ -1,9 +1,9 @@
-#Entity Relatedness Project
+# Entity Relatedness Project
 
 The Entity Relatedness Project (ERP) is an iniciative to find relations and paths between two entities in Knowlegde Databases.
 
 
-##Dependencies
+## Dependencies
 
 * Lua 5.2
 * Lua Rocks 2.4.1
@@ -19,7 +19,7 @@ The Entity Relatedness Project (ERP) is an iniciative to find relations and path
 * GNU parallel 20161122
 * Redis Server 3.2.6
 
-#Architecture Configuration
+# Architecture Configuration
 
 ## Ontology Class
 
@@ -33,11 +33,11 @@ The generated jobs are executed in paralllel with GNU parallel [4]. The URIs are
 ## Finding Path
 
    
-#References
+# References
 
 [1] Herrera, J., Casanova, M.A., Nunes, B.P., Lopes, G.R., and Leme, L.A. DBpedia Profiler Tool: Profiling the Connectivity of Entity Pairs in DBpedia. Proc. 5th Workshop on Intelligent Exploration of Semantic Data (October 2016).
-[2] DBpedia Ontology Ontology.http://downloads.dbpedia.org/2014/dbpedia_2014.owl.bz2
-[3] Wikidata Taxonomy: https://tools.wmflabs.org/wikidata-exports/rdf/exports/20160801/wikidata-taxonomy.nt.gz
-[4] GNU Parallel: https://www.gnu.org/software/parallel/
+<br/>[2] DBpedia Ontology Ontology.http://downloads.dbpedia.org/2014/dbpedia_2014.owl.bz2
+<br/>[3] Wikidata Taxonomy: https://tools.wmflabs.org/wikidata-exports/rdf/exports/20160801/wikidata-taxonomy.nt.gz
+<br/>[4] GNU Parallel: https://www.gnu.org/software/parallel/
 
 
