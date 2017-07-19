@@ -27,8 +27,7 @@ At the data pre-processing layer, ERP builds an index (using Redis) over the DBp
 
 ## Processing Data
 
-The data extraction is executed throug HTTP request. We used luasockets and luaexpat for this task. 
-The generated jobs are executed in paralllel with GNU parallel [4]. The URIs are indentified in an Entity Document is sored and encoded in a Local Redis Server.
+The data extraction is executed throug HTTP requests. We used luasockets and luaexpat for this task. The generated jobs are executed in paralllel with GNU parallel [4]. The URIs indentified in an Entity Document is sored and encoded in a Local Redis Server.
 
 ## Finding Path
 
