@@ -293,10 +293,10 @@ local function specify_class_process()
 end
 
 local function query_components()
-        local kquery=client:lpop("lexperimento_triple_object:"..parameters[2])
+        local kquery=client:lpop("l_experiment_triple_object:"..parameters[2])
         if kquery then
                 client:hset("query_components:"..parameters[2],kquery,"START")
-		local squery = client6380:hget("experimento_triple_object", kquery)
+		local squery = client6380:hget("experiment_triple_object", kquery)
 		squery =  "SELECT count(*) WHERE { "..squery.." }"
 		local result = sparql.query ({query=squery})
 		local temp_key = kquery:gsub("query","value")
@@ -304,9 +304,9 @@ local function query_components()
 		if result and result[1] then
 			local value = result[1][1]
 			value = tonumber(value)
-			client6380:hset("experimento_triple_object", temp_key, value)
+			client6380:hset("experiment_triple_object", temp_key, value)
 		else
-			client6380:hset("experimento_triple_object", temp_key, 0)
+			client6380:hset("experiment_triple_object", temp_key, 0)
 		end
 
         else
@@ -326,12 +326,12 @@ wait_process (nil,"principal_process")
 wait_process (specify_class_process,"principal_process")
 
 --start process 2
-start_process(especify_class_process)
+start_process(specify_class_process)
 --wait process 2 and execute processo3
 wait_process (nil,"specify_process:")
 ------------------------------------------------------------------
 
---start process 10
+--start process 3
 start_process(query_components)
 wait_process (nil,"query_components:")
 ------------------------------------------------------------------
