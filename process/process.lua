@@ -181,7 +181,6 @@ local function step_extend(name_list,action)
                                 else    break   end
                         end
 end
------------------------------------------------------------------------------------------------------------------
 
 
 local interval_class = 10
