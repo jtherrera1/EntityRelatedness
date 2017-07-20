@@ -46,4 +46,4 @@ This process is enabled in the our web site [5], it enable our connectivity prof
 <br/>[2] Herrera, J.: On the Connectivity of Entity Pairs in Knowledge Bases Ph.D. Thesis, Depart-ment of Informatics, Pontifical Catholic University of Rio de Janeiro - 2017. http://www-di.inf.puc-rio.br/~casanova/Publications/Dissertations-Theses/2017-Jose-Talavera.pdf.
 <br/>[3] DBpedia Ontology Ontology.http://downloads.dbpedia.org/2014/dbpedia_2014.owl.bz2
 <br/>[4] GNU Parallel: https://www.gnu.org/software/parallel/
-<br/>[5] http://semanticweb.inf.puc-rio.br/cprofiles
+<br/>[5] Connectivity Profile Strategy: http://semanticweb.inf.puc-rio.br/cprofiles
