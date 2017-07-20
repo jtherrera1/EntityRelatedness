@@ -31,7 +31,7 @@ The data extraction is executed throug HTTP requests. We used luasockets and lua
 
 ## Finding Path
 For this process, we develop a generic search strategy based on the backward search heuristic [2]. Using simple HTTP requests, the backward search heuristic simultaneously starts from the vertices in the RDF graph that correspond to the pair of input entities, and recursively expands the search to their neighboring nodes until a candidate relationship path is generated. 
-The imputs are two entities, the database and code of the process, we will enable in the next version the access to Wikidata.
+<br/>The imputs are two entities, the database and code of the process, we will enable in the next version the access to Wikidata.
 
 Process execution:
 ```bash
