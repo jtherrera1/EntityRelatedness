@@ -91,7 +91,6 @@ local function dbpedia_is(url,is_property, ntype)
                                                                 client6380:hsetnx("decode_url",code_set,url)
 
                                                                 return true, code
-								-------------------------------------------------------		
                                                         else
                                                                 return false, nil
 
