@@ -107,7 +107,7 @@ local function process_expand(name_list)
 
         local start = (id_range * interval) + stop
         local end_range = start + interval
-        local list_entity=client:lrange(name_list,start,end_range)
+        local list_entity=client6379:lrange(name_list,start,end_range)
         if list_entity and #list_entity > 0 then
             for k, entity in pairs(list_entity) do
                     client6379:hset("list_expand:"..sequence,start,"START")
@@ -127,7 +127,7 @@ end
 
 local function wait_process(f, name)
         while true do
-                local len = client:hlen(name..parameters[2])
+                local len = client6379:hlen(name..parameters[2])
                 len = tonumber(len)
                 if len>0 then
                  -- execute process
@@ -189,9 +189,9 @@ local stop_class= 0
 local function step_immediate_class()
 	local start = (id_range * interval_class) + stop_class
 	local end_range = start + interval_class
-        local list_entity=client:lrange("l_object_immediate_class:"..parameters[2]..":"..nivel,start,end_range)
+        local list_entity=ient6379:lrange("l_object_immediate_class:"..parameters[2]..":"..nivel,start,end_range)
 	if list_entity and #list_entity > 0 then
- 		client:hset("list_process_immediate_class:"..parameters[2],start,end_range)
+ 		client6379:hset("list_process_immediate_class:"..parameters[2],start,end_range)
 		for k, entity in pairs(list_entity) do
 	                data.init(sequence,nivel,"immediate_class",database,nil,nil, client6379, client6380, start_node,end_node,run_start)
         	        data.get_immediate_class(entity)
@@ -200,7 +200,7 @@ local function step_immediate_class()
                 return false
         end
 	stop_class = interval_class*interval_class + stop_class
-        client:hdel("list_process_immediate_class:"..parameters[2],start)
+        client6379:hdel("list_process_immediate_class:"..parameters[2],start)
         return true
 
 end
@@ -255,9 +255,9 @@ end
 
 
 local function query_components()
-        local kquery=client:lpop("l_experiment_triple_object:"..parameters[2])
+        local kquery=client6379:lpop("l_experiment_triple_object:"..parameters[2])
         if kquery then
-                client:hset("query_components:"..parameters[2],kquery,"START")
+                client6379:hset("query_components:"..parameters[2],kquery,"START")
 		local squery = client6380:hget("experiment_triple_object", kquery)
 		squery =  "SELECT count(*) WHERE { "..squery.." }"
 		local result = sparql.query ({query=squery})
@@ -274,7 +274,7 @@ local function query_components()
         else
                 return false
         end
-        client:hdel("query_components:"..parameters[2],kquery)
+        client6379:hdel("query_components:"..parameters[2],kquery)
         return true
 end
 
