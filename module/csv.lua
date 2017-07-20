@@ -13,7 +13,7 @@ local gsub = require"string".gsub
 local tconcat = require"table".concat
 
 local M = {
-	_COPYRIGHT = "Copyright (C) 2009-2011 PUC-Rio",
+	_COPYRIGHT = "Copyright (C) 2009-2017 PUC-Rio",
 	_DESCRIPTION = "Módulo de leitura de arquivo no formato CSV",
 	_VERSION = "Sintra CSV "..("$Id: csv.lua,v 1.21 2013/08/16 00:57:46 tomas Exp $"):match(",v (%S+)"),
 }

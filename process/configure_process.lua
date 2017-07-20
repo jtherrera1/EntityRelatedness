@@ -2,7 +2,7 @@ local redis = require 'redis_config'
 local data = require 'data_rdf_wd'
 
 local M = {
-        _COPYRIGHT = "Copyright (C) 2009-2011 PUC-Rio",
+        _COPYRIGHT = "Copyright (C) 2017 PUC-Rio",
 }
 
 

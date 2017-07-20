@@ -7,7 +7,7 @@ local http = require"socket.http"
 
 
 local M = {
-        _COPYRIGHT = "Copyright (C) 2009-2017 PUC-Rio",
+        _COPYRIGHT = "Copyright (C) 2017 PUC-Rio",
 }
 local literal = false
 local next_tag = false

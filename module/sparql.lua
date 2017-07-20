@@ -19,8 +19,7 @@ local redis_path = require "redis_path"
 
 
 local M = {
-        _COPYRIGHT = "Copyright (C) 2009-2011 PUC-Rio",
-        _DESCRIPTION = "Módulo SPARQL",
+        _COPYRIGHT = "Copyright (C) 2017 PUC-Rio",
 	port=nil,
 	client=nil,
 	start_value=nil,

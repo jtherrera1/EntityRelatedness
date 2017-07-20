@@ -1,7 +1,7 @@
 local redis = require 'redis_config'
 
 local M = {
-        _COPYRIGHT = "Copyright (C) 2009-2011 PUC-Rio",
+        _COPYRIGHT = "Copyright (C) 2017 PUC-Rio",
 }
 
 local client6379 = redis.getRedis(6379)

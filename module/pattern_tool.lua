@@ -1,9 +1,8 @@
 #!/usr/bin/env lua5.2
 
 local M = {
-		_COPYRIGHT = "Copyright (C) 2009-2011 PUC-Rio",
+		_COPYRIGHT = "Copyright (C) 2017 PUC-Rio",
 		_DESCRIPTION = "Módulo Extrair Padroes",
-		_VERSION = "Patterns "..("$Id: csv.lua,v 1.21 2013/08/16 00:57:46 jose Exp $"):match(",v (%S+)"),
 	client = nil,
 	parameter= nil,
 	porcent=10,

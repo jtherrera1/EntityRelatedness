@@ -8,7 +8,7 @@ local texto
 local classes_number
 local description_entity 
 local M = {
-                _COPYRIGHT = "Copyright (C) 2009-2017 PUC-Rio",
+                _COPYRIGHT = "Copyright (C) 2017 PUC-Rio",
                 _DESCRIPTION = "Get Immediate Class",
 }
 

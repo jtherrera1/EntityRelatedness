@@ -2,7 +2,7 @@
 local redis = require 'redis'
 
 local M = {
-        _COPYRIGHT = "Copyright (C) 2009-2017 PUC-Rio",
+        _COPYRIGHT = "Copyright (C) 2017 PUC-Rio",
         _DESCRIPTION = "Módulo Redis",
 }
 
