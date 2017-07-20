@@ -255,43 +255,6 @@ client6379:hdel("principal_process:"..sequence,ID_PROCESS)
 end
 
 
-
-local function getFrequencyClass(str_classes)
-        local par = 1
-	local class_key  =""
-	local class_value = 0	
-        for class in string.gmatch(str_classes, "([^,]+)") do
-                if not(par % 2 == 0) then
-			class_key =  class
-		else
-			
-			class_value = tonumber(class)
-			if class_key == "Thing" then
-				class_value = 0
-			end
-			client:zincrby("zentity_classes:"..parameters[2],class_value,class_key)
-			client:hincrby("hentity_classes:"..parameters[2],class_key,1)
-                end
-		par =  par + 1 
-	end
-end
-
-local function specify_class_process()
-        local entity = client:lpop("_objects:"..parameters[2])
-        if entity then
-                client:hset("specify_process:"..parameters[2],entity,"START")
-		local url = client6380:hget("decode_url",entity)
-                local str_classes = client6380:hget(url,"immediate_class")
-                if str_classes then
-			getFrequencyClass(str_classes)
-		end	
-        else
-                return false
-        end
-        client:hdel("specify_process:"..parameters[2],entity)
-        return true
-end
-
 local function query_components()
         local kquery=client:lpop("l_experiment_triple_object:"..parameters[2])
         if kquery then
@@ -322,15 +285,7 @@ end
 get_paths()
 
 wait_process (nil,"principal_process")
-
-wait_process (specify_class_process,"principal_process")
-
---start process 2
-start_process(specify_class_process)
---wait process 2 and execute processo3
-wait_process (nil,"specify_process:")
 ------------------------------------------------------------------
-
 --start process 3
 start_process(query_components)
 wait_process (nil,"query_components:")
