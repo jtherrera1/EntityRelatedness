@@ -23,7 +23,7 @@ The Entity Relatedness Project (ERP) is an iniciative to find relations and path
 
 ## Ontology Class
 
-At the data pre-processing layer, ERP builds an index (using Redis) over the DBpedia class hierarchy to help identify the immediate classes of an entity. We follow the approach published at [1]. The Onotlogy of DBpedia is available at [3]. In a next version we available this data as a service.  
+At the data pre-processing layer, ERP builds an index (using Redis) over the DBpedia class hierarchy to help identify the immediate classes of an entity. We follow the approach published in [1]. The Onotlogy of DBpedia is available at [3]. In a next version we available this data as a service.  
 
 ## Processing Data
 
